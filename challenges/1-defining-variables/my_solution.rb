@@ -1,6 +1,7 @@
  #Defining Variables
 
 # Tu solucion abajo
+
 first_name = "Dumar "
 last_name = "Ojeda "
 age = 18
