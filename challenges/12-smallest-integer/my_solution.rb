@@ -4,8 +4,7 @@
 
 # Tu solucion abajo:
 def smallest_integer(numbers)
-  numbers.sort!
-  numbers.first
+  numbers.sort!.first
 end
 
 smallest_integer([1, 2, 3])       # => 1
