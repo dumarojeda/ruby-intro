@@ -1,7 +1,12 @@
 # Define a Hash
 
 # Tu solucion abajo:
-
+my_info = {
+  first_name: 'Dumar',
+  last_name: 'Ojeda',
+  hometown: 'Bogota',
+  age: 15
+}
 
 
 # Pruebas NO LAS BORRES
