@@ -1,6 +1,7 @@
 # Pretty Triangle
 
 
+
 # Tu solucion abajo:
 def print_triangle(int)
   if int > 0  
@@ -9,3 +10,42 @@ def print_triangle(int)
     end
   end
 end
+
+# def print_triangle(arg)
+#     array = (1..arg).to_a
+#     dot = []
+#     array.map do |num|
+#         dot.push("*" *  num)
+#     end
+#     puts dot.join(',')
+# end
+
+# def print_triangle int1
+#   if int1<=0
+
+#    else
+#      otro=0
+#        while (otro < int1)
+#          otro += 1
+#          h = Hash.new {|h,k| h[otro] = '*'*otro.to_i}   #=> {}
+#          puts h.default(otro)
+#        end
+#    end
+# end
+
+
+
+
+
+
+
+
+# def print_triangle(rows)
+#   multiplicator = 1
+#   while multiplicator <= rows
+#     puts ("*" * multiplicator)
+#     multiplicator +=1
+#   end
+# end
+
+>>>>>>> dd0b0ab0e31b0b16675c628fe2eb5a9f039c0bf6
