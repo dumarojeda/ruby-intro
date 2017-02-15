@@ -4,7 +4,6 @@
 
 
 # Tu solucion abajo:
-def do_something(st_arg, nd_arg, rd_arg)
-  
-end
+def do_something(a, b, c) #arity, signature
 
+end

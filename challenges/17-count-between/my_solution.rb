@@ -8,3 +8,19 @@ def count_between(array, numinf, numsup)
     array.count{|x| x >= numinf && x <= numsup }
   end
 end
+
+
+# def count_between(arr, upper, lower)
+#   arr.count {|x| (x >= lower) && (x<= upper)}
+# end
+
+# def count_between(arr, lower, upper)
+#   count = 0
+#   arr.each do |x|
+#     if (x >= lower) && (x<= upper)
+#       count = count + 1
+#     end
+#   end
+#   count
+# end
+
