@@ -63,6 +63,21 @@ puts zombie_apocalypse_supplies.delete_if {| supply |
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
 # ----
+puts " "
+puts "5 Zombie "+"-"*15
+puts " "
+
+zombie_apocalypse_supplies.each do | supply |
+  if other_survivor_supplies.include?(supply)
+    other_survivor_supplies.delete supply
+  end
+  # other_survivor_supplies.delete_if {| supply | 
+  #   other_survivor_supplies.include?(supply)
+  # }
+end
+
+combine_supplies = []
+puts combine_supplies = zombie_apocalypse_supplies + other_survivor_supplies
 
 # Practica de Hash
 
