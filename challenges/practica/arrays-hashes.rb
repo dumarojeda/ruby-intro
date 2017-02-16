@@ -121,6 +121,20 @@ end
 
 # 3. Nuestros calculos estaban muy mal, resulta que todos esos animales se extinguieron 3 años antes que la fecha dada. Actualiza los valores dentro de extinct_animals para que reflejen el valor real de la fecha de extincion.
 # ----
+puts " "
+puts "3 Animal "+"-"*15
+puts " "
+
+extinct_animals.map do | animal, year |
+  year += 3
+  puts "#{animal} - #{year}"
+  puts "*"
+end
+
+extinct_animals.each do | animal, year |
+  puts "#{animal} - #{year}"
+  puts "*"
+end
 
 # 4. Oiste que los siguientes animales podian estar extinctos, pero no estas seguro. Uno por uno revisa si se encuentran incluidos dentro del hash extinct_animals:
 # "Andean Cat"
