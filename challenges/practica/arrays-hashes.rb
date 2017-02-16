@@ -93,6 +93,14 @@ extinct_animals = {
 
 # 1. Itera sobre el hash extinct_animals, imprimiendo cada vez el la pareja de key/value con un dash (-) entre ellos y un asterisco (*) entre cada elemento (animal extincto).
 # ----
+puts " "
+puts "1 Animal "+"-"*15
+puts " "
+
+extinct_animals.each do | animal, year |
+  puts "#{animal} - #{year}"
+  puts "*"
+end
 
 # 2. Elimina todos los animales que se extinguieron despues del año 1999, del hash extinct_animals. No uses metodos especiales solo `delete` e iteraciones.
 # ----
