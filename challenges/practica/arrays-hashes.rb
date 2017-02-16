@@ -157,7 +157,24 @@ end
 # 5. Acabamos de encontrar que el Passenger Pigeon, realmente no esta extincto!
 # Remuevelo del hash extinct_animals y devuelve su pareja de key/value como un arreglo de dos elementos. Puedes encontrar un metodo en la documentacion de la  clase Hash que te puede ayudar con esto.
 # ----
+puts " "
+puts "5 Animal "+"-"*15
+puts " "
 
+passenger_pigeon = extinct_animals.select {| animal | animal == "Passenger Pigeon"}
+
+passenger_pigeon.each do | animal, year |
+  puts "#{animal} - #{year}"
+end
+
+puts " "
+
+extinct_animals.delete_if {| animal | animal == "Passenger Pigeon"}
+
+extinct_animals.each do | animal, year |
+  puts "#{animal} - #{year}"
+  puts "*"
+end
 
 # Practica, Estructuras nesteadas
 
