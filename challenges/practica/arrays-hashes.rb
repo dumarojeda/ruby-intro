@@ -125,10 +125,8 @@ puts " "
 puts "3 Animal "+"-"*15
 puts " "
 
-extinct_animals.map do | animal, year |
-  year += 3
-  puts "#{animal} - #{year}"
-  puts "*"
+extinct_animals.each do | animal, year |
+  extinct_animals[animal] = year + 3
 end
 
 extinct_animals.each do | animal, year |
