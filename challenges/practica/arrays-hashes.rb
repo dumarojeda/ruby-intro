@@ -27,6 +27,20 @@ result == ["binoculars", "CB radio", "compass", "hatchet", "rations","shotgun", 
 
 # 3. Crea un metodo que mire si un item (string) esta dentro del arreglo zombie_apocalypse_supplies. Por ejemplo esta `boots` dentro de la lista de suministros?.
 # ----
+puts " "
+puts "3 Zombie "+"-"*15
+puts " "
+
+def finding_supplies(supply, supplies)
+  if supplies.include?(supply)
+    puts "Si hay #{supply} dentro de la lista"
+  else
+    puts "No hay #{supply} dentro de la lista"
+  end
+end
+
+finding_supplies("compass", zombie_apocalypse_supplies)
+finding_supplies("pizza", zombie_apocalypse_supplies)
 
 # 4. No puedes cargar muchas cosas, solo hay espacio para 5. Remueve todos los items del arreglo zombie_apocalypse_supplies que tengas mas de dos palabras, solo pueden quedar los 5 items compuestos de una sola palabra.
 # ----
