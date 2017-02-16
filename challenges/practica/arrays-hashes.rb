@@ -6,6 +6,12 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 
 # 1. Itera sobre el array zombie_apocalypse_supplies, imprimiendo cada elemento dentro del array.
 # ----
+puts "1 Zombie "+"-"*15
+puts " "
+
+zombie_apocalypse_supplies.each do | supply |
+  puts supply
+end
 
 # 2. Para mantenernos organizados, organiza el array zombie_apocalypse_supplies de forma alfabetica.
 # ----
