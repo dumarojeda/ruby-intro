@@ -104,6 +104,20 @@ end
 
 # 2. Elimina todos los animales que se extinguieron despues del año 1999, del hash extinct_animals. No uses metodos especiales solo `delete` e iteraciones.
 # ----
+puts " "
+puts "2 Animal "+"-"*15
+puts " "
+
+extinct_animals.each do | animal, year |
+  if year > 1999
+    extinct_animals.delete(animal)
+  end
+end
+
+extinct_animals.each do | animal, year |
+  puts "#{animal} - #{year}"
+  puts "*"
+end
 
 # 3. Nuestros calculos estaban muy mal, resulta que todos esos animales se extinguieron 3 años antes que la fecha dada. Actualiza los valores dentro de extinct_animals para que reflejen el valor real de la fecha de extincion.
 # ----
