@@ -142,6 +142,19 @@ end
 # "Tasmanian Tiger"
 # "Saiga Antelope"
 # ----
+puts " "
+puts "4 Animal "+"-"*15
+puts " "
+
+others_animals = ["Andean Cat", "Dodo", "Tasmanian Tiger", "Saiga Antelope"]
+
+others_animals.each do | animal |
+  if extinct_animals.include?(animal)
+    puts "#{animal} esta dentro de la lista"
+  else
+    puts "#{animal} No esta dentro de la lista"
+  end
+end
 
 # 5. Acabamos de encontrar que el Passenger Pigeon, realmente no esta extincto!
 # Remuevelo del hash extinct_animals y devuelve su pareja de key/value como un arreglo de dos elementos. Puedes encontrar un metodo en la documentacion de la  clase Hash que te puede ayudar con esto.
