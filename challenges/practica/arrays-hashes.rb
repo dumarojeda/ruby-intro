@@ -44,6 +44,20 @@ finding_supplies("pizza", zombie_apocalypse_supplies)
 
 # 4. No puedes cargar muchas cosas, solo hay espacio para 5. Remueve todos los items del arreglo zombie_apocalypse_supplies que tengas mas de dos palabras, solo pueden quedar los 5 items compuestos de una sola palabra.
 # ----
+puts " "
+puts "4 Zombie "+"-"*15
+puts " "
+
+# zombie_apocalypse_supplies.map do | supply |
+#   # if supply.split.size == 2
+#   #   zombie_apocalypse_supplies.delete supply
+#   # end
+#   puts supply
+# end
+
+puts zombie_apocalypse_supplies.delete_if {| supply | 
+  supply.split.size > 1 
+}
 
 # 5. Encontraste otro sobreviviente! esto significa que pueden combinar sus suministros. Crea un nuevo arreglo de suministros combinados en base a tus zombie_apocalypse_supplies, y los sumnitros del otro sobreviviente. Debes deshacerte de todos los suministros que esten duplicados. No olvides revisar la documentacion de Array.
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
