@@ -15,8 +15,15 @@ end
 
 # 2. Para mantenernos organizados, organiza el array zombie_apocalypse_supplies de forma alfabetica.
 # ----
+puts " "
+puts "2 Zombie "+"-"*15
+puts " "
 
- result == ["binoculars", "CB radio", "compass", "hatchet", "rations","shotgun", "Tactical 10mm", "water jug"]
+puts result = zombie_apocalypse_supplies.sort_by { | supply |
+  supply.downcase
+}
+
+result == ["binoculars", "CB radio", "compass", "hatchet", "rations","shotgun", "Tactical 10mm", "water jug"]
 
 # 3. Crea un metodo que mire si un item (string) esta dentro del arreglo zombie_apocalypse_supplies. Por ejemplo esta `boots` dentro de la lista de suministros?.
 # ----
