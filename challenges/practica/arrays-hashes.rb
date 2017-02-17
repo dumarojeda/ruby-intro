@@ -186,7 +186,28 @@ array = [[1,2], ["inner", ["eagle", "par", ["FORE", "hook"]]]]
 
 # Intentos:
 # ============================================================
+puts " "
+puts "1 Nested Structures "+"-"*15
+puts " "
 
+# array = [
+#   [1,2], 
+#   ["inner", 
+#     ["eagle", "par", 
+#       ["FORE", "hook"]
+#     ]
+#   ]
+# ]
+
+#p array[1][1][2][0]
+
+array.flatten!
+
+array.each do |item|
+  if item == "FORE"
+    p item
+  end
+end
 
 
 # ============================================================
