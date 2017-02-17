@@ -230,7 +230,29 @@ hash = {outer: {inner: {"almost" => {3 => "congrats!"}}}}
 
 # Intentos:
 # ============================================================
+puts " "
+puts "2 Nested Structures "+"-"*15
+puts " "
 
+# hash = {
+#   outer: {
+#     inner: {
+#       "almost" => {
+#         3 => "congrats!"
+#       }
+#     }
+#   }
+# }
+
+# hash.values[0].values[0].values[0].values
+
+hash.each do |key, value|
+  value.values.each do |key, value|
+    key.values.each do |key, value|
+      puts key.values
+    end
+  end
+end
 
 
 # ============================================================
