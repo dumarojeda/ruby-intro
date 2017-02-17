@@ -317,3 +317,27 @@ p number_array
 # Crea un metodo que recina un array como argumento, en este caso el array startup_names, y devuelva un array igual pero en donde a cada nombre se le a añadido 'ly' al final.
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
+
+puts " "
+puts "Add string "+"-"*15
+puts " "
+
+startup_names.map.with_index do |string, index|
+  if string.is_a?(Array)
+    string.map.with_index do |sub_string, sub_index|
+      
+      if sub_string.is_a?(Array)
+        sub_string.map.with_index do |sub_sub_string, sub_sub_index|
+          startup_names[index][sub_index][sub_sub_index] += "ly"
+        end
+      else
+        startup_names[index][sub_index] += "ly"
+      end
+
+    end
+  else
+    startup_names[index] += "ly"
+  end
+end
+
+p startup_names
