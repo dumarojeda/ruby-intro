@@ -201,9 +201,9 @@ puts " "
 
 #p array[1][1][2][0]
 
-array.flatten!
+new_array = array.flatten
 
-array.each do |item|
+new_array.each do |item|
   if item == "FORE"
     p item
   end
