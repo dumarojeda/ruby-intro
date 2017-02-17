@@ -300,9 +300,19 @@ puts " "
 puts "Add number "+"-"*15
 puts " "
 
-number_array.flatten.each do |item|
-  puts item + 5
+number_array.map.with_index do |number, index|
+  if number.is_a?(Array)
+    number.map.with_index do |sub_number, sub_index|
+      number_array[index][sub_index] += 5
+    end
+  else
+    number_array[index] += 5
+  end
 end
+
+p number_array
+
+
 
 # Crea un metodo que recina un array como argumento, en este caso el array startup_names, y devuelva un array igual pero en donde a cada nombre se le a añadido 'ly' al final.
 
