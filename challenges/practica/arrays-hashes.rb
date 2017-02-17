@@ -199,7 +199,20 @@ puts " "
 #   ]
 # ]
 
-#p array[1][1][2][0]
+puts "Solution 1"
+puts " "
+
+p array[1][1][2][0]
+
+puts " "
+puts "Solution 2"
+puts " "
+
+p array.last.last.last[0]
+
+puts " "
+puts "Solution 3"
+puts " "
 
 new_array = array.flatten
 
@@ -208,7 +221,6 @@ new_array.each do |item|
     p item
   end
 end
-
 
 # ============================================================
 
