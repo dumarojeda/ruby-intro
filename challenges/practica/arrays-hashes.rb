@@ -13,6 +13,16 @@ zombie_apocalypse_supplies.each do | supply |
   puts supply
 end
 
+puts " "
+puts "Teacher solution"
+puts " "
+
+puts zombie_apocalypse_supplies
+
+zombie_apocalypse_supplies.each do |thing|
+  p thing
+end
+
 # 2. Para mantenernos organizados, organiza el array zombie_apocalypse_supplies de forma alfabetica.
 # ----
 puts " "
@@ -24,6 +34,12 @@ puts result = zombie_apocalypse_supplies.sort_by { | supply |
 }
 
 result == ["binoculars", "CB radio", "compass", "hatchet", "rations","shotgun", "Tactical 10mm", "water jug"]
+
+puts " "
+puts "Teacher solution"
+puts " "
+
+zombie_apocalypse_supplies.sort_by { |word| word.downcase }
 
 # 3. Crea un metodo que mire si un item (string) esta dentro del arreglo zombie_apocalypse_supplies. Por ejemplo esta `boots` dentro de la lista de suministros?.
 # ----
@@ -42,6 +58,16 @@ end
 finding_supplies("compass", zombie_apocalypse_supplies)
 finding_supplies("pizza", zombie_apocalypse_supplies)
 
+puts " "
+puts "Teacher solution"
+puts " "
+
+def is_there_thing?(thing, a)
+  a.include?(thing)
+end
+
+is_there_thing?('compass', zombie_apocalypse_supplies)
+
 # 4. No puedes cargar muchas cosas, solo hay espacio para 5. Remueve todos los items del arreglo zombie_apocalypse_supplies que tengas mas de dos palabras, solo pueden quedar los 5 items compuestos de una sola palabra.
 # ----
 puts " "
@@ -58,6 +84,12 @@ puts " "
 puts zombie_apocalypse_supplies.delete_if {| supply | 
   supply.split.size > 1 
 }
+
+puts " "
+puts "Teacher solution"
+puts " "
+
+result = zombie_apocalypse_supplies.select {|thing| !thing.include?(' ')}
 
 # 5. Encontraste otro sobreviviente! esto significa que pueden combinar sus suministros. Crea un nuevo arreglo de suministros combinados en base a tus zombie_apocalypse_supplies, y los sumnitros del otro sobreviviente. Debes deshacerte de todos los suministros que esten duplicados. No olvides revisar la documentacion de Array.
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
@@ -78,6 +110,15 @@ end
 
 combine_supplies = []
 puts combine_supplies = zombie_apocalypse_supplies + other_survivor_supplies
+
+puts " "
+puts "Teacher solution"
+puts " "
+
+result = zombie_apocalypse_supplies + other_survivor_supplies
+result = result.uniq
+
+result = zombie_apocalypse_supplies | other_survivor_supplies
 
 # Practica de Hash
 
@@ -102,6 +143,16 @@ extinct_animals.each do | animal, year |
   puts "*"
 end
 
+puts " "
+puts "Teacher solution"
+puts " "
+
+extinct_animals.each do |animal, year|
+  puts "#{animal}-#{year}"
+  puts '*'
+end
+
+
 # 2. Elimina todos los animales que se extinguieron despues del año 1999, del hash extinct_animals. No uses metodos especiales solo `delete` e iteraciones.
 # ----
 puts " "
@@ -119,6 +170,14 @@ extinct_animals.each do | animal, year |
   puts "*"
 end
 
+puts " "
+puts "Teacher solution"
+puts " "
+
+extinct_animals.each do |animal, year|
+  extinct_animals.delete(animal) if year > 1999
+end
+
 # 3. Nuestros calculos estaban muy mal, resulta que todos esos animales se extinguieron 3 años antes que la fecha dada. Actualiza los valores dentro de extinct_animals para que reflejen el valor real de la fecha de extincion.
 # ----
 puts " "
@@ -132,6 +191,14 @@ end
 extinct_animals.each do | animal, year |
   puts "#{animal} - #{year}"
   puts "*"
+end
+
+puts " "
+puts "Teacher solution"
+puts " "
+
+extinct_animals.each do |animal, year|
+  extinct_animals[animal] = year - 3
 end
 
 # 4. Oiste que los siguientes animales podian estar extinctos, pero no estas seguro. Uno por uno revisa si se encuentran incluidos dentro del hash extinct_animals:
@@ -176,6 +243,12 @@ extinct_animals.each do | animal, year |
   puts "*"
 end
 
+puts " "
+puts "Teacher solution"
+puts " "
+
+extinct_animals.to_a.unshift(["Passenger Pigeon", 1914]).to_h.shift
+
 # Practica, Estructuras nesteadas
 
 # Imprime en la consola solo el elemento target ningun otro
@@ -219,6 +292,16 @@ new_array = array.flatten
 new_array.each do |item|
   if item == "FORE"
     p item
+  end
+end
+
+puts " "
+puts "Teacher solution"
+puts " "
+
+array.flatten.each do |thing|
+  if thing == "FORE"
+    p thing
   end
 end
 
@@ -314,7 +397,7 @@ p number_array
 
 
 
-# Crea un metodo que recina un array como argumento, en este caso el array startup_names, y devuelva un array igual pero en donde a cada nombre se le a añadido 'ly' al final.
+# Crea un metodo que reciva un array como argumento, en este caso el array startup_names, y devuelva un array igual pero en donde a cada nombre se le a añadido 'ly' al final.
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
 
@@ -341,3 +424,22 @@ startup_names.map.with_index do |string, index|
 end
 
 p startup_names
+
+puts " "
+puts "Note random of Teacher"
+puts " "
+
+a = ['hola', 'como', 'estas', 'como']
+
+a.each.with_index do |item, i|
+  'como'
+  a.each.with_index do |secondItem, y|
+    item = 'como'
+    secondItem  = 'como'
+    i = 1
+    y = 3
+    item == secondItem
+  end
+end
+
+
