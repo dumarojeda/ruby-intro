@@ -263,8 +263,32 @@ nested_data = {array: ["array", {hash: "finished"}]}
 
 # Intentos:
 # ============================================================
+puts " "
+puts "3 Nested Structures "+"-"*15
+puts " "
 
+# nested_data = {
+#   array: [
+#     "array", 
+#     { hash: "finished" }
+#   ]
+# }
 
+puts " "
+puts "Solution 1"
+puts " "
+
+puts nested_data.values[0][1].values
+
+puts " "
+puts "Solution 2"
+puts " "
+
+nested_data.each do |key, value|
+  value[1].each do |key|
+    p key[1]
+  end
+end
 
 # ============================================================
 
