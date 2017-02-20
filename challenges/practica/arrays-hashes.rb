@@ -396,14 +396,9 @@ end
 p number_array
 
 
-
 # Crea un metodo que reciva un array como argumento, en este caso el array startup_names, y devuelva un array igual pero en donde a cada nombre se le a añadido 'ly' al final.
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
-
-puts " "
-puts "Add string "+"-"*15
-puts " "
 
 startup_names.map.with_index do |string, index|
   if string.is_a?(Array)
@@ -424,22 +419,3 @@ startup_names.map.with_index do |string, index|
 end
 
 p startup_names
-
-puts " "
-puts "Note random of Teacher"
-puts " "
-
-a = ['hola', 'como', 'estas', 'como']
-
-a.each.with_index do |item, i|
-  'como'
-  a.each.with_index do |secondItem, y|
-    item = 'como'
-    secondItem  = 'como'
-    i = 1
-    y = 3
-    item == secondItem
-  end
-end
-
-
