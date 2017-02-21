@@ -12,6 +12,8 @@ def has_ssn?(string)
   else
     false
   end
+  # Teacher solution
+  #!!(string =~ (/\d{3}-\d{2}-\d{4}/))
 end
 
 puts "has_ssn? returns true if it has what looks like a SSN"
@@ -30,6 +32,9 @@ def grab_ssn(string)
   else
     nil
   end
+
+  # Teacher solution
+  #string[/\d{3}-\d{2}-\d{4}/]
 end
 
 
@@ -42,8 +47,12 @@ puts grab_ssn("please confirm your identity: XXX-XX-1422") == nil
 
 # Devuelve todos los SSN dentro de un string. Si no hay ninguno devuelve un arreglo Vacio.
 def grab_all_ssns(string)
+
   # tu codigo va aca
   cedula_gringa = string.scan(/\d{3}-\d{2}-\d{4}/)
+
+  # Teacher solution
+  #string.scan(/\d{3}-\d{2}-\d{4}/)
 end
 
 puts "grab_all_ssns returns all SSNs if the string has any SSNs"
@@ -55,8 +64,12 @@ puts grab_all_ssns("please confirm your identity: XXX-XX-1422") == []
 
 # Ofusca todos los SSN dentro de un string, por ejmplo 123-55-4430 se convierte en  XXX-XX-4430. Deuvuele el string con los SSB ofuscados.
 def hide_all_ssns(string)
+
   # tu codigo va aca
   cedula_gringa = string.gsub(/(\d{3}-\d{2})/, "XXX-XX")
+
+  # Teacher solution
+  #string.gsub(/\d{3}-\d{2}-/, 'XXX-XX-' )
 end
 
 puts "hide_all_ssns obfuscates any SSNs in the string"
@@ -70,8 +83,10 @@ puts hide_all_ssns(string) == string
 # Asegura que todos los SSN usen guiones (-) como separador de los numeros.
 # Ejemplo: 480.01.4430 y 480014430 se convierten en 480-01-4430.
 def format_ssns(string)
+
   # tu codigo va aca
   
+  string.gsub(/(\d{3})\D?(\d{2})\D?(\d{4})/, '\1-\2-\3')
 end
 
 puts "format_ssns finds and reformat any SSNs in the string"
