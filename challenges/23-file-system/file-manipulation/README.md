@@ -8,11 +8,6 @@ Existen varias clases que nos ayudan a manipular archivos pero la principales`Fi
 
 ### Paso 1: Leer Archivos dentro de Carpetas
 
-En este paso deberas hacer una combinacion de los metodos:
-
-- readdir
-- readFile
-
 Tu objetivo es leer todos los archivos de primer nivel de la carpeta `testFiles`. Esto quiere decir que no debes leer los archivos que se encuentren dentro de `nestedDirectory`
 
 el programa debe imprimir los contenidos de cada archivo en la terminal, lo que quires decir que deberias ver la historia de Javascript y de KeyboardCat en tu terminal.
@@ -24,7 +19,6 @@ En este paso deberas crear un programa que le permita al usuario crear un archiv
 EL objetivo es que un usuario pueda hacer lo siguiente desde la terminal:
 
 ```bash
-
 $ ruby write_file.rb --phrase 'hola como estas'
 ```
 

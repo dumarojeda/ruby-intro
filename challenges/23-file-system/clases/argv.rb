@@ -11,4 +11,3 @@ else
 
   p "Hola #{user}, #{greeting}"
 end
-
