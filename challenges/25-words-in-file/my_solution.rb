@@ -34,8 +34,6 @@ def most_common_words(filename,number)
   end
 end
 
-
-
 # 2. Solucion con Refactor
 
 
