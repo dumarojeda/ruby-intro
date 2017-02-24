@@ -4,8 +4,6 @@
 
 # 1. Solucion Inicial
 def mode(array)
-  #array.group_by{ |e| e }
-
   group = Hash.new(0)
   array.each do |i|
     group[i]+=1
