@@ -33,13 +33,6 @@ end
 #    end
 # end
 
-
-
-
-
-
-
-
 # def print_triangle(rows)
 #   multiplicator = 1
 #   while multiplicator <= rows
@@ -48,4 +41,3 @@ end
 #   end
 # end
 
->>>>>>> dd0b0ab0e31b0b16675c628fe2eb5a9f039c0bf6

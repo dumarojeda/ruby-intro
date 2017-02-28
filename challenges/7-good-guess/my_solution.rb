@@ -8,4 +8,3 @@ def good_guess?(a)
     false
   end
 end
-
