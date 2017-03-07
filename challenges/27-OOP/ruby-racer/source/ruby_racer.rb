@@ -1,28 +1,59 @@
 require_relative 'racer_utils'
 
 class RubyRacer
-  attr_reader :players, :length
+  attr_reader :players, :length, :winner
 
   def initialize(players, length = 30)
+    @players = players
+    @length = length
+    @positions_player = Hash.new(0)
+    @winner = nil
+    @dice = Die.new
+  end
+
+  def create_race
+    @players.each {|player| @positions_player[player] = 0}
   end
 
   # Devuelve true si uno de los jugadores llego a la meta, falso de lo contrario
   def finished?
+    status = false
+    @players.each do |player| 
+      # p "#{player} = #{@positions_player[player]}"
+      if @positions_player[player] >= @length 
+        @winner = player
+        status =  true
+      end 
+    end
+    status
   end
 
   # Retorna el ganador si hay uno, nil de lo contrario
-  def winner
-  end
+  # def winner
+  #   @winner
+  # end
 
   # Rueda el dado y avanza la posicion del jugador respectivo
   def advance_player!(player)
+    @positions_player[player] += @dice.roll
   end
 
   # Imprime el tablero actual
   # El tablero siempre debe tener las mismas dimensiones
   # Debes imprimir encima del tablero anterior
   def print_board
+    positions_empty = Array.new(@length, " ")
+    @players.each.with_index do |player, index|
+      positions_empty[@positions_player[player] > @length ? @length : @positions_player[player]] = player
+
+      positions_empty.each do |e|
+        print "#{e}|"
+      end    
+      print "\n"
+    end
+
   end
+
 end
 
 #=========== driver code ===========
